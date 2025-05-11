@@ -16,12 +16,42 @@ export class SubmitFormComponent implements OnInit{
   fullName: string = '';
   address: string = '';
   creditCardNumber: number = 0;
+  nameWarning: boolean = false;
+  adressWarning: boolean = false;
+  creditCardWarning: boolean = false;
 
 
   constructor(private router: Router, private cartService: CartService){}
 
   ngOnInit(): void {
     
+  }
+
+  nameChanged(event: any): void{
+    if (event.length < 3){
+      this.nameWarning = true
+    } else {
+      this.nameWarning = false
+    }
+
+  }
+
+  addressChanged(event: any): void{
+    if (event.length < 6){
+      this.adressWarning = true
+    } else {
+      this.adressWarning = false
+    }
+
+  }
+
+  creditCardChanged(event: any): void{
+    if (event.length < 16){
+      this.creditCardWarning = true
+    } else {
+      this.creditCardWarning = false
+    }
+
   }
 
   onSubmit(): void{

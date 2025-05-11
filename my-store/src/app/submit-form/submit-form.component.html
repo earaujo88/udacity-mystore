@@ -1,10 +1,13 @@
 <form #form="ngForm" (ngSubmit)="onSubmit()" id="submission-form">
     <label for="fullname">Full Name:</label>
-    <input type="text" id="fullname" name="fullname" [(ngModel)]="fullName" placeholder="(Minimum 3 characters)" required minlength="3"><br>
+    <input type="text" id="fullname" name="fullname" [(ngModel)]="fullName" (ngModelChange)="nameChanged($event)" placeholder="(Minimum 3 characters)" required minlength="3"><br>
+    <span class="validation_message"  *ngIf="nameWarning">Name must have at least 3 characters</span>
     <label for="address">Address:</label>
-    <input type="text" id="address" name="address" [(ngModel)]="address" placeholder="(Minimum 6 characters)" required minlength="6"><br>
+    <input type="text" id="address" name="address" [(ngModel)]="address" (ngModelChange)="addressChanged($event)" placeholder="(Minimum 6 characters)" required minlength="6"><br>
+    <span class="validation_message"  *ngIf="adressWarning">Address must have at least 6 characters</span>
     <label for="creditCard">Credit Card Number:</label>
-    <input type="text" id="creditCard" name="creditCardNumber" [(ngModel)]="creditCardNumber" placeholder="(16-digit-number)" required maxlength="16"><br>
+    <input type="text" id="creditCard" name="creditCardNumber" [(ngModel)]="creditCardNumber" (ngModelChange)="creditCardChanged($event)" placeholder="(16-digit-number)" required minlength="16" maxlength="16"><br>
+    <span class="validation_message"  *ngIf="creditCardWarning">Credit Card numer must have at least 6 characters</span>
     <button type="submit" [disabled]="form.invalid">Submit</button>
 </form>
 

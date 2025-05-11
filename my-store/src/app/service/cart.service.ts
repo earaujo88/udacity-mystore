@@ -38,9 +38,10 @@ export class CartService {
   }
 
   removeItem(id: number) {
-    this.cart = this.cart.filter(item => item.id !== id);
+    this.cart = this.cart.filter(item => item.id !== id);    
     console.log(id)
-    this.cartSubject.next(this.cart); 
+    this.cartSubject.next(this.cart);
+
   }
 
   cleanCart(): void {

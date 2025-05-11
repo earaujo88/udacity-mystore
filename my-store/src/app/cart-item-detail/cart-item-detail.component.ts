@@ -29,6 +29,7 @@ export class CartItemDetailComponent {
     removeProductFromCart(cartItem: Cart) {
       if (cartItem.id !== undefined){
         this.cartService.removeItem(cartItem.id)
+        window.alert(`Sucessfully removed ${cartItem.productName} from cart`)
         this.cartItemQty.emit(cartItem)
       }
     }   
