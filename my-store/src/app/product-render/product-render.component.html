@@ -1,0 +1,18 @@
+<div class="product-container">
+    <a routerLink="/product-detail" [state]="{product}"><img src = {{product.url}} class="product-image"></a>
+    <p>{{ product.name }}</p>
+    <p>{{ product.price }}</p>
+    <select name="qty" class="select-input" [(ngModel)]="qty" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <input type="submit" value="Add To Cart" (click)="addProductToCart(product)" [disabled]="!qty">
+</div>

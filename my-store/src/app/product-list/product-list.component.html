@@ -1,0 +1,5 @@
+<div class="product-container">
+    <div class="product-index">
+        <app-product-render *ngFor="let product of productList" [product]="product" (productAdded)="addedProduct(product)" ></app-product-render>
+    </div>
+</div>

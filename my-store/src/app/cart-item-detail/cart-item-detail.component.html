@@ -1,0 +1,11 @@
+<div class="cart-item">
+    <img src={{cart.productUrl}}>
+    <div class="cart-item-details">
+        <h3>{{ cart.productName }}</h3>
+        <p>${{ cart.productPrice }}</p>
+        <label for="amount">Amount:</label>
+        <p>Quantity: {{ cart.qty }}</p>
+        <input type="submit" value="Remove" (click)="removeProductFromCart(cart)"><br>
+    </div>
+
+</div>

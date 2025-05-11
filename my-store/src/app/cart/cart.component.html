@@ -1,0 +1,11 @@
+<div *ngIf="cart.length === 0, else elseBlock" class="empty-cart-message">No products have been added to the cart yet</div>
+<ng-template #elseBlock>
+    <div class="cart-container">    
+        <div class= "cart-panel">
+            <app-cart-item-detail *ngFor="let cartItem of cart" [cart]="cartItem" (cartItemQty)="qtyChanged(cartItem)"></app-cart-item-detail>
+            <h1 >Total Amount: {{ totalAmount }}</h1>
+            
+        </div>
+        <app-submit-form></app-submit-form>    
+    </div>
+</ng-template>

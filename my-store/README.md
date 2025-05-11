@@ -1,59 +1,49 @@
-# MyStore
+# Angular My Store Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+This Angular application mimics an online store with features including a product list, product detail view, and a shopping cart. Users can add products to the cart from both the product list and product detail pages. The cart allows users to remove items and includes a form to submit orders.
 
-## Development server
+## 🔧 Features
 
-To start a local development server, run:
+- **Product List**: Displays all available products.
+- **Product Detail**: Shows detailed information about a selected product.
+- **Shopping Cart**:
+  - Add products from the product list and detail pages.
+  - Remove items from the cart.
+  - Submit an order using a form.
 
-```bash
-ng serve
-```
+## Prerequisites
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Ensure you have the following installed:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Installation Instructions
 
-```bash
-ng generate component component-name
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/earaujo88/udacity-mystore.git
+   cd udacity-mystore/my-store
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. **Install dependencies**:
+   Run the following command to install the required dependencies using npm:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate --help
-```
+3. **Start the Angular server**:
+   You can start the Angular application on the default port or specify a custom port.
 
-## Building
+   - **Default Port (4200)**:
+     ```bash
+     ng serve
+     ```
 
-To build the project run:
+   - **Custom Port (e.g., 4300)**:
+     ```bash
+     ng serve --port 4300
+     ```
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. **Open your browser**:
+   Navigate to `http://localhost:4200` (or your custom port) to view the application.
